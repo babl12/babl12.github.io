@@ -4,10 +4,31 @@
     
     <title>Пример HTML страницы</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header id="header" >
+        <div class="container">
+            <div class="logo">
+                <img src="transparent-globe-world-earth-map-planet-5d7d60949facb7.490638271568497812654.png" width="300" height="300" alt="Логотип"  >
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="https://www.office.com/">Ссылка 1</a></li>
+                        <li><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Ссылка2</a></li>
+                        <li><a href="https://sso.dzen.ru/install?uuid=7eca4e4c-5086-4de2-9e47-097b42d2e7a0">Ссылка 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>Название сайта</h1>
+        </div>    
+    </header>
+
+
+    <main class ="container">
     <h2>Маркированный список гиперсылок</h2>
-    <ul>
+    <ul class="ul">
         <li><a href="http://www.kubsu.ru">Главная страница сайта kubsu.ru </a></li>
         <li><a href="https://www.kubsu.ru">Главная страница сайта kubsu.ru (https)</a></li>
         <li><a href="https://www.kubsu.ru">
@@ -28,7 +49,7 @@
             <img src="nature-1-60833-1024x576-MM-80.png" usemap="#map" alt="Изображение с областью">
             <map name="map">
                 <area shape="rect" coords="535,99,724,231" href="https://example.com/rect" alt="Прямоугольная область">
-                <area shape="circle" coords="223,164,75" href="https://youtube.com" alt="Круглая область">
+                <area shape="circle" coords="223,164,75" href="https://example.com/circle" alt="Круглая область">
             </map>
         </li>
         <li><a href="">Ссылка с пустым href</a></li>
@@ -44,9 +65,63 @@
         </li>
         <li><a href="ftp://user:pass123@task.ru/Temp/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
     </ul>
+    <h2>Таблица данных</h2>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+                <th>Колонка 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="odd">
+                <td>Данные 1</td>
+                <td>Данные 2</td>
+                <td>Данные 3</td>
+                <td>Данные 4</td>
+            </tr>
+            <tr class="even">
+                <td>Данные 5</td>
+                <td>Данные 6</td>
+                <td>Данные 7</td>
+                <td>Данные 8</td>
+            </tr>
+            <tr class="odd">
+                <td>Данные 9</td>
+                <td>Данные 10</td>
+                <td>Данные 11</td>
+                <td>Данные 12</td>
+            </tr>
+            <tr class="even">
+                <td>Данные 13</td>
+                <td>Данные 14</td>
+                <td>Данные 15</td>
+                <td>Данные 16</td>
+            </tr>
+            <tr class="odd">
+                <td>Данные 17</td>
+                <td>Данные 18</td>
+                <td>Данные 19</td>
+                <td>Данные 20</td>
+            </tr>
+            <tr class="even">
+                <td>Данные 21</td>
+                <td>Данные 22</td>
+                <td>Данные 23</td>
+                <td>Данные 24</td>
+            </tr>
+        </tbody>
+    </table>
     
     <h2>Форма</h2>
-    <form action="/example" method="POST">
+    <form action="/example" method="POST" class="form">
         <label>
             ФИО:<br>
             <input name="field-name-1">
@@ -97,12 +172,17 @@
         </label><br>
 
         <br>
-        <label><input type="checkbox" name="check-1">
+        <label><input type="checkbox" checked="checked" name="check-1">
         С контрактом ознакомлен (а)</label><br>
         
         <input type="submit" value="Сохранить">
     </form>
     <p id="section">Фрагмент страницы</p>
-    
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <p>© 2024 Название сайта. Все права защищены.</p>
+        </div>
+    </footer>
 
 </html>
