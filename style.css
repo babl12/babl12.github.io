@@ -1,49 +1,71 @@
+
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   background-color: rgb(78, 148, 120); 
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-#header{
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  
+  align-items: center;
+  padding: 20px;
+}
+
+#header {
   background-color: rgb(49, 110, 148);
   text-align: center;
-  padding: 10px ;
+  padding: 10px;
+  width: 100vw;
+  
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.logo {
+  width: 100vw;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column; 
+  padding: 0;
+  list-style: none;
+  text-align: center;
 }
 
-.container{
-  margin: auto ;
-  padding: 20px;
-  max-width: 960px
-}
-.menu{
-  border: 2px solid rgb(10, 64, 157);
-  list-style: none; 
-  width:400px;
-  margin:0px 700px ;
-  position: relative;
-  top:-300px;
-}
 .menu li {
-  display: inline;
-  margin-right: 50px;
+  margin-bottom: 10px;
+  
 }
+
 .menu a {
   text-decoration: none;
   color: #333;
-  border-radius: 5px;  
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
 }
 
-.logo  {
-  margin-left: -1000px;
+.ul {
+  font-size: 16px;
+  padding: 10px;
 }
-.ul{
-  font-size: 18px;
-}
+
 table {
   width: 100%;
+  
   border-collapse: collapse;
   margin-top: 20px;
 }
+
 th, td {
   border: 1px solid #9b2727;
   padding: 8px;
@@ -61,17 +83,69 @@ th {
 .even {
   background-color: #ecaeae;
 }
-.form{
-  width: 960px; 
-  margin: 0 auto; 
+
+.form {
+  width: 100vh; 
+  max-width: 100%;
+  height: auto;
+  
   padding: 20px; 
   border: 1px solid #ccc; 
   border-radius: 8px; 
   background-color: #8cc699; 
+  border-collapse: collapse;
 }
+
 #footer {
-  margin-top: 20px;
   background-color: #169f7b;
   text-align: center;
   padding: 10px 0;
+  margin-top: 20px;
+}
+
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    
+  }
+
+  .menu ul {
+    flex-direction: row; 
+    justify-content: flex-end;
+  }
+
+  .menu li {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: start;
+    width: 300px;
+    height: auto;
+  }
+
+  .ul {
+    font-size: 18px;
+  }
+
+  .form {
+    max-width: 960px;
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  
+  .bot {
+    order: 0;
+  }
+
+  .top {
+    order: -1;
+  }
 }
