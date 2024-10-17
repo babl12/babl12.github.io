@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const productSelect = document.getElementById('product');
     
     const prices = {
-      1: 100, // Товар 1
-      2: 200, // Товар 2
-      3: 300  // Товар 3
+      1: 100, 
+      2: 200,
+      3: 300  
     };
     
-    // Функция для подсчета стоимости
+    
     function calculateTotal() {
       const productId = parseInt(productSelect.value);
       const quantity = parseInt(quantityInput.value);
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       resultElement.textContent = `Итоговая стоимость: ${totalCost} руб.`;
     }
   
-    // Проверка корректности ввода количества (только цифры)
+    
     quantityInput.addEventListener('input', function () {
       const validInput = /^[0-9]*$/.test(quantityInput.value);
       if (!validInput) {
