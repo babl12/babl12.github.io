@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   
-    // Обработчик события на кнопку "Посчитать"
+    
     calculateBtn.addEventListener('click', calculateTotal);
   });
   
