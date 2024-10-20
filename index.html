@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Калькулятор стоимости заказа</title>
+  <title>Калькулятор стоимости услуги</title>
   <script defer src="p.js"></script>
 </head>
 <body>
 
-  <h1>Калькулятор стоимости заказа</h1>
+  <h1>Калькулятор стоимости услуги</h1>
   
   <form id="orderForm">
+    <label>Выберите тип услуги:</label><br>
+    <input type="radio" id="service1" name="service" value="1">
+    <label for="service1">Услуга 1</label><br>
+    <input type="radio" id="service2" name="service" value="2">
+    <label for="service2">Услуга 2</label><br>
+    <input type="radio" id="service3" name="service" value="3">
+    <label for="service3">Услуга 3</label><br><br>
+
     <label for="product">Выберите товар:</label>
     <select id="product" name="product">
       <option value="0">Выберите...</option>
@@ -23,7 +31,18 @@
     <label for="quantity">Количество:</label>
     <input type="text" id="quantity" name="quantity">
     <br><br>
-    
+
+    <div id="options" style="display:none;">
+      <label>Дополнительные опции:</label><br>
+      <select id="optionSelect">
+        <option value="none">Без опций</option>
+        <option value="option1">Опция 1</option>
+        <option value="option2">Опция 2</option>
+      </select><br><br>
+
+      <label><input type="checkbox" id="extraOption"> Специальная опция</label><br><br>
+    </div>
+
     <button type="button" id="calculate">Посчитать</button>
   </form>
   
