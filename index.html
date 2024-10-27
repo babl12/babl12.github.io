@@ -1,54 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Калькулятор стоимости услуги</title>
-  <script defer src="p.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Калькулятор стоимости услуги</h1>
-  
-  <form id="orderForm">
-    <label>Выберите тип услуги:</label><br>
-    <input type="radio" id="service1" name="service" value="1">
-    <label for="service1">Услуга 1</label><br>
-    <input type="radio" id="service2" name="service" value="2">
-    <label for="service2">Услуга 2</label><br>
-    <input type="radio" id="service3" name="service" value="3">
-    <label for="service3">Услуга 3</label><br><br>
-
-    <label for="product">Выберите товар:</label>
-    <select id="product" name="product">
-      <option value="0">Выберите...</option>
-      <option value="1">Товар 1 - 100 руб.</option>
-      <option value="2">Товар 2 - 200 руб.</option>
-      <option value="3">Товар 3 - 300 руб.</option>
-    </select>
-    <br><br>
-    
-    <label for="quantity">Количество:</label>
-    <input type="text" id="quantity" name="quantity">
-    <br><br>
-
-    <div id="options" style="display:none;">
-      <label>Дополнительные опции:</label><br>
-      <select id="optionSelect">
-        <option value="none">Без опций</option>
-        <option value="option1">Опция 1</option>
-        <option value="option2">Опция 2</option>
-      </select><br><br>
+<div class="gallery">
+    <div class="slider">
+        <div><img src="img1.jpg" alt="Image 1"></div>
+        <div><img src="img2.jpg" alt="Image 2"></div>
+        <div><img src="img3.jpg" alt="Image 3"></div>
+        <div><img src="img4.jpg" alt="Image 4"></div>
+        <div><img src="img5.jpg" alt="Image 5"></div>
+        <div><img src="img6.jpg" alt="Image 6"></div>
+        <div><img src="img7.jpg" alt="Image 7"></div>
+        <div><img src="img8.jpg" alt="Image 8"></div>
     </div>
+</div>
 
-    <div id="properties" style="display:none;">
-      <label><input type="checkbox" id="extraOption"> Специальная опция</label><br><br>
-    </div>
-
-    <button type="button" id="calculate">Посчитать</button>
-  </form>
-  
-  <p id="result"></p>
-  
+<script defer src="p.js"></script>
 </body>
 </html>
