@@ -45,7 +45,7 @@ form.addEventListener("submit", function (event) {
   formData.append("comment", comment);
 
   // Отправляем данные на FormCarry
-  fetch("https://formcarry.com/s/hwBv_HOfwFJ", {
+  fetch("https://formcarry.com/s/Jw0N4wwNBwU", {
     method: "POST",
     body: formData,
     headers: {
